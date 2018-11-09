@@ -139,6 +139,7 @@ class Event(object):
                 self.mytype = None
                 self.keyword = None
                 self.registry = events_registry
+                timestamp = None
                 for k in kwargs:
                         if k == 'timestamp':
                                 timestamp = kwargs[k]
