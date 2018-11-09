@@ -241,5 +241,5 @@ if __name__ == '__main__':
 
         pp.pprint(r)
 
-        #Event(r, 'me').register_info_success("all went well")
-        #Event(r, 'me').register_err_fail("halt and catch fire")
+        Event(r, 'me').register_info_success("all went well")
+        Event(r, 'me').register_err_fail("halt and catch fire")
