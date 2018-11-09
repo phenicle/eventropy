@@ -138,6 +138,8 @@ class Event(object):
                 self.message = None
                 self.mytype = None
                 self.keyword = None
+
+                # TODO: assert that events_registry is an EventsRegistry
                 self.registry = events_registry
                 timestamp = None
                 for k in kwargs:
@@ -153,7 +155,7 @@ class Event(object):
                 if timestamp:
                         self.timestamp = timestamp
                 else:
-                        if registry.use_utc:
+                        if events_registry.use_utc:
                                 self.timestamp = str(datetime.now())
                         else:
                                 self.timestamp = str(datetime.utcnow())
