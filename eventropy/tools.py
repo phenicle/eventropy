@@ -208,7 +208,6 @@ class Event(object):
         def register_info_success(self, msg):
 
                 # TODO: assert that self.register is not null and is an EventsRegistry
-                self.source = source
                 self.severity = INFO
                 self.status = STATUS_OK
                 self.message = msg
@@ -219,7 +218,6 @@ class Event(object):
         def register_err_fail(self, msg):
 
                 # TODO: assert that self.register is not null and is an EventsRegistry
-                self.source = source
                 self.severity = ERROR
                 self.status = STATUS_FAIL
                 self.message = msg
