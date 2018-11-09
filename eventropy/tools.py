@@ -7,7 +7,7 @@ from cfgpy.tools import FMT_YAML, Cfg
 
 pp = pprint.PrettyPrinter(indent=4)
 
-DEBUGGING = True
+DEBUGGING = False
 
 OFF   = 0
 ALL   = 1
