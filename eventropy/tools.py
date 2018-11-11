@@ -21,6 +21,7 @@ FATAL = 7
 STATUS_UNKNOWN = -1
 STATUS_OK = 0
 STATUS_FAIL = 1
+STATUS_OTHER = 2
 
 def load_config():
 
