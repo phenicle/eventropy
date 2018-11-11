@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
    name='eventropy',
-   version='1.0.1',
+   version='1.0.2',
    description='Events Management',
    license="Mozilla Public License 2.0 (MPL 2.0)",
    long_description='A configurable events registry for Python. It assumes that you will be using PostgreSQL as the backing store.',
