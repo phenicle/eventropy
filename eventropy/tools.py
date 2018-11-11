@@ -129,6 +129,7 @@ class Event(object):
         STATUS_UNKNOWN = -1
         STATUS_OK = 0
         STATUS_FAIL = 1
+        STATUS_OTHER = 2
 
         # def __init__(self, registry, severity, source, status, msg, timestamp=None, keyword=None, mytype=None):
         def __init__(self, events_registry, source, **kwargs):
@@ -217,6 +218,15 @@ class Event(object):
                         print msg
                 self.register()
 
+        def register_warn_other(self, msg):
+
+                self.severity = WARN
+                self.status = STATUS_OTHER
+                self.message = msg
+                if DEBUGGING:
+                        print msg
+                self.register()
+
         def register_err_fail(self, msg):
 
                 # TODO: assert that self.register is not null and is an EventsRegistry
@@ -246,3 +256,4 @@ if __name__ == '__main__':
 
         Event(r, 'me').register_info_success("all went well")
         Event(r, 'me').register_err_fail("halt and catch fire")
+        Event(r, 'me').register_warn_other("something happened")
